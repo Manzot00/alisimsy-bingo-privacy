@@ -5,36 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy - Alisimsy BINGO!</title>
   <style>
+    /* BODY: sfondo gradiente viola -> rosa */
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #18141D;
+      /* Gradiente verticale dall’alto (viola) al basso (rosa) */
+      background: linear-gradient(180deg, #6e44ff 0%, #bf54f5 100%);
       color: #FFFFFF;
       line-height: 1.6;
+      min-height: 100vh; /* per estendere il gradient all’intera pagina */
+      display: flex;
+      flex-direction: column;
     }
+
+    /* CONTAINER: per contenuti centrati e con uno sfondo leggermente scuro */
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      /* leggero sfondo trasparente */
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin-top: 40px; /* spaziatura dall’alto */
+      margin-bottom: 40px; /* spaziatura dal basso */
     }
+
     h1, h2, h3 {
       color: #FFFFFF;
       margin-top: 1em;
+      margin-bottom: 0.5em;
     }
+
     p {
       margin: 1em 0;
     }
+
     ul {
       margin: 1em 0;
       padding-left: 20px;
     }
+
+    /* Link color viola Twitch */
     a {
-      color: #9146FF; /* Colore viola di Twitch */
+      color: #9146FF; 
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Esempio di stile personalizzato per le sezioni */
+    h2 {
+      margin-top: 1.5em;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 0.4em;
+    }
+
+    /* Responsive: riduce i margini se lo schermo è stretto */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -42,14 +76,18 @@
   <div class="container">
     <h1>Privacy Policy per Alisimsy BINGO!</h1>
     
-    <p>Questa Privacy Policy descrive come Alisimsy BINGO! raccoglie, utilizza e protegge le informazioni fornite dagli utenti durante l&rsquo;utilizzo della nostra Extension su Twitch.</p>
+    <p>Questa Privacy Policy descrive come Alisimsy BINGO! raccoglie, utilizza e protegge
+      le informazioni fornite dagli utenti durante l’utilizzo della nostra Extension su Twitch.</p>
     
     <h2>1. Informazioni raccolte</h2>
-    <p>La nostra Estensione utilizza la funzionalità di Identity Linking (ID Share) fornita da Twitch per ottenere l&rsquo;<strong>ID</strong> dell'utente dal quale viene estratto il display name o username. In particolare:</p>
+    <p>La nostra Estensione utilizza la funzionalità di Identity Linking (ID Share) fornita da Twitch per
+       ottenere l’<strong>ID</strong> dell’utente dal quale viene estratto il display name o username. In particolare:</p>
     <ul>
-      <li><strong>Display Name:</strong> Utilizziamo il display name per personalizzare la tua scheda del bingo e per citarti in chat in caso di bingo.</li>
+      <li><strong>Display Name:</strong> Utilizziamo il display name per personalizzare la tua scheda del bingo
+        e per citarti in chat in caso di bingo.</li>
     </ul>
-    <p><em>Nota:</em> Non salviamo l&rsquo;ID utente né altri dati personali. L&rsquo;unico dato salvato nel nostro database è il display name, usato esclusivamente per associare la scheda all&rsquo;utente.</p>
+    <p><em>Nota:</em> Non salviamo l’ID utente né altri dati personali. L’unico dato salvato nel nostro
+       database è il display name, usato esclusivamente per associare la scheda all’utente.</p>
     
     <h2>2. Come utilizziamo i dati</h2>
     <p>I dati raccolti sono utilizzati per:</p>
@@ -61,16 +99,21 @@
     <p>I dati non vengono utilizzati per finalità di marketing o condivisi con terze parti.</p>
     
     <h2>3. Conservazione dei dati</h2>
-    <p>Il tuo display name viene memorizzato esclusivamente per associare la scheda del bingo al tuo account durante la live o fino a quando non richiedi la cancellazione dei dati.</p>
+    <p>Il tuo display name viene memorizzato esclusivamente per associare la scheda del bingo al tuo account
+       durante la live o fino a quando non richiedi la cancellazione dei dati.</p>
     
     <h2>4. Sicurezza</h2>
-    <p>Adottiamo misure tecniche e organizzative per proteggere i dati raccolti da accessi non autorizzati. Tutte le comunicazioni tra il tuo dispositivo e il nostro backend avvengono tramite connessioni HTTPS.</p>
+    <p>Adottiamo misure tecniche e organizzative per proteggere i dati raccolti da accessi non autorizzati.
+       Tutte le comunicazioni tra il tuo dispositivo e il nostro backend avvengono tramite connessioni HTTPS.</p>
     
     <h2>5. Condivisione dei dati</h2>
-    <p>I dati raccolti non vengono condivisi con terze parti. Il display name è utilizzato esclusivamente per garantire che la tua scheda del bingo sia sempre associata al tuo account.</p>
+    <p>I dati raccolti non vengono condivisi con terze parti. Il display name è utilizzato esclusivamente
+       per garantire che la tua scheda del bingo sia sempre associata al tuo account.</p>
     
     <h2>6. Diritti dell'utente</h2>
-    <p>In conformità alle normative vigenti, hai il diritto di accedere, modificare o richiedere la cancellazione dei tuoi dati personali. Per esercitare tali diritti, contattaci all&rsquo;indirizzo <a href="mailto:alisimsydev@gmail.com">alisimsydev@gmail.com</a>.</p>
+    <p>In conformità alle normative vigenti, hai il diritto di accedere, modificare o richiedere la
+       cancellazione dei tuoi dati personali. Per esercitare tali diritti, contattaci all’indirizzo
+       <a href="mailto:alisimsydev@gmail.com">alisimsydev@gmail.com</a>.</p>
   </div>
 </body>
 </html>
