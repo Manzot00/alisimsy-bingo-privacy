@@ -29,7 +29,7 @@
     .container {
       position: relative;
       max-width: 1000px;
-      margin: 40px 0 40px 40px; /* top, right, bottom, left */
+      margin: 20px auto;
       padding: 20px;
       background: rgba(0, 0, 0, 0.2);
       border-radius: 8px;
@@ -66,17 +66,54 @@
       text-decoration: underline;
     }
 
-    /* Selettore lingua, posizionato in alto a destra all'interno del container */
     .lang-select {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
-      padding: 5px;
-      color: #FFFFFF;
-      font-size: 14px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* background semitrasparente, se vuoi */
+        background: rgba(0,0,0,0.3);
+        padding: 5px;
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 4px;
+    }
+
+    /* Stile personalizzato per <select> */
+    .lang-select select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        /* Larghezza e altezza minime per dare spazio a testo e freccia */
+        min-width: 100px;
+        min-height: 32px;
+
+        /* Spaziatura interna: a destra diamo più spazio per la freccia */
+        padding: 7px 2rem 7px 10px; /* top, right, bottom, left */
+
+        /* Colore di sfondo e bordo */
+        background-color: #9146FF;
+        border: 1px solid #9146FF;
+        border-radius: 4px;
+
+        /* Colore del testo */
+        color: #FFFFFF;
+        font-size: 14px;
+        line-height: 1.2; /* evita che la freccia si posizioni troppo in alto */
+
+        cursor: pointer;
+
+        /* Freccia personalizzata come immagine di sfondo */
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFFFFF' d='M5.000 3.849 9.225.17a.583.583 0 0 1 .841.808L5.425 5.83a.583.583 0 0 1-.85 0L.01.978a.583.583 0 1 1 .85-.8L5.000 3.85Z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+
+        /* Posizioniamo la freccia a destra, centrata verticalmente */
+        background-position: right 0.75rem center;
+        background-size: 10px 6px;
+        }
+
+        /* Rimuove la freccia nativa in IE/Edge e alcuni browser */
+        .lang-select select::-ms-expand {
+        display: none;
     }
 
     /* Stile heading secondario */
@@ -198,16 +235,34 @@
     const privacyIt = document.getElementById('privacy-it');
     const privacyEn = document.getElementById('privacy-en');
 
-    langSelector.addEventListener('change', function() {
-      const selectedLang = this.value;
-      if (selectedLang === 'en') {
-        privacyIt.style.display = 'none';
-        privacyEn.style.display = 'block';
-      } else {
-        privacyEn.style.display = 'none';
-        privacyIt.style.display = 'block';
-      }
+    document.addEventListener('DOMContentLoaded', () => {
+        // Imposta il selettore in base alla lingua salvata o default a 'it'
+        const savedLang = localStorage.getItem('selectedLang') || 'it';
+        const langSelector = document.getElementById('langSelector');
+        langSelector.value = savedLang;
+
+        // Aggiorna il contenuto in base alla lingua salvata
+        updateLanguage(savedLang);
     });
+
+    langSelector.addEventListener('change', function() {
+        const selectedLang = this.value;
+        localStorage.setItem('selectedLang', selectedLang);
+        updateLanguage(selectedLang);
+    });
+
+    function updateLanguage(lang) {
+        const privacyIt = document.getElementById('privacy-it');
+        const privacyEn = document.getElementById('privacy-en');
+
+        if (lang === 'en') {
+            privacyIt.style.display = 'none';
+            privacyEn.style.display = 'block';
+        } else {
+            privacyEn.style.display = 'none';
+            privacyIt.style.display = 'block';
+        }
+    }
   </script>
 </body>
 </html>
