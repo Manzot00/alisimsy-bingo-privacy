@@ -16,7 +16,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Karla', sans-serif;
+      font-family: 'Rubik', sans-serif;
       background: linear-gradient(180deg, #6e44ff 0%, #bf54f5 100%);
       color: #FFFFFF;
       line-height: 1.6;
@@ -27,6 +27,7 @@
 
     /* Container con sfondo scuro semitrasparente */
     .container {
+      position: relative;
       max-width: 800px;
       margin: 40px auto;
       padding: 20px;
@@ -89,14 +90,14 @@
   </style>
 </head>
 <body>
-
-  <div class="container">
-     <div class="lang-select">
-        <select id="langSelector">
-          <option value="it" selected>Italiano</option>
-          <option value="en">English</option>
-        </select>
-      </div>
+    <div class="container">
+        <!-- Selettore lingua posizionato in alto a destra all'interno del container -->
+        <div class="lang-select">
+          <select id="langSelector">
+            <option value="it" selected>Italiano</option>
+            <option value="en">English</option>
+          </select>
+        </div>
     <!-- Sezione in Italiano -->
     <div id="privacy-it">
       <h1>Privacy Policy per Alisimsy BINGO!</h1>
