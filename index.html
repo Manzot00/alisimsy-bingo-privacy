@@ -9,14 +9,14 @@
   <!-- Preconnect e link al font “Poppins”. Sostituisci se vuoi “Karla” o “Rubik” -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&family=Rubik:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     /* BODY: gradiente viola -> rosa */
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Rubik', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: linear-gradient(180deg, #6e44ff 0%, #bf54f5 100%);
       color: #FFFFFF;
       line-height: 1.6;
@@ -28,8 +28,8 @@
     /* Container con sfondo scuro semitrasparente */
     .container {
       position: relative;
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 1000px;
+      margin: 40px 0 40px 40px; /* top, right, bottom, left */
       padding: 20px;
       background: rgba(0, 0, 0, 0.2);
       border-radius: 8px;
@@ -71,6 +71,12 @@
       position: absolute;
       top: 10px;
       right: 10px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      padding: 5px;
+      color: #FFFFFF;
+      font-size: 14px;
     }
 
     /* Stile heading secondario */
