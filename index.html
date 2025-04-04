@@ -9,14 +9,14 @@
   <!-- Preconnect e link al font “Poppins”. Sostituisci se vuoi “Karla” o “Rubik” -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&family=Rubik:wght@400&display=swap" rel="stylesheet">
 
   <style>
     /* BODY: gradiente viola -> rosa */
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Karla', sans-serif;
       background: linear-gradient(180deg, #6e44ff 0%, #bf54f5 100%);
       color: #FFFFFF;
       line-height: 1.6;
@@ -34,7 +34,14 @@
       border-radius: 8px;
     }
 
-    h1, h2, h3 {
+    h1 {
+      color: #FFFFFF;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    h2, h3 {
       color: #FFFFFF;
       margin-top: 1em;
       margin-bottom: 0.5em;
@@ -58,7 +65,7 @@
       text-decoration: underline;
     }
 
-    /* Selettore lingua in alto a destra, ad esempio */
+    /* Selettore lingua, posizionato in alto a destra all'interno del container */
     .lang-select {
       position: absolute;
       top: 10px;
@@ -83,15 +90,13 @@
 </head>
 <body>
 
-  <!-- Selettore lingua (spinner) -->
-  <div class="lang-select">
-    <select id="langSelector">
-      <option value="it" selected>Italiano</option>
-      <option value="en">English</option>
-    </select>
-  </div>
-
   <div class="container">
+     <div class="lang-select">
+        <select id="langSelector">
+          <option value="it" selected>Italiano</option>
+          <option value="en">English</option>
+        </select>
+      </div>
     <!-- Sezione in Italiano -->
     <div id="privacy-it">
       <h1>Privacy Policy per Alisimsy BINGO!</h1>
